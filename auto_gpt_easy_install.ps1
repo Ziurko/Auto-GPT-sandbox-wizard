@@ -3,7 +3,7 @@ Write-Host "Welcome to the Auto-GPT setup script! This script will guide you thr
 # Install Chocolatey if not already installed
 if (-not (Get-Command "choco" -ErrorAction SilentlyContinue)) {
     Set-ExecutionPolicy Bypass -Scope Process -Force
-    iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
 
 $softwareInstalled = $false
